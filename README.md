@@ -21,23 +21,22 @@ Este es un microservicio que gestiona las transacciones bancarias de un sistema,
 
 El microservicio de transacciones permite realizar operaciones como:
 
+- **💳 Crear una Cuenta**
 - **💰 Realizar un Depósito**
 - **💸 Realizar un Retiro**
 - **🔄 Realizar una Transferencia**
 
-El historial de transacciones está almacenado en **MongoDB** y se puede consultar a través de un endpoint.
-
 ---
 
 ### **Base de Datos - Account**
-A continuación, se muestra la base de datos en MongoDB de las cuentas.
+A continuación, se muestra la base de datos en MongoDB de las cuentas creadas.
 
 ![base de datos_accounts](https://github.com/user-attachments/assets/c27499ab-d93f-49b5-a97e-89f556d19bae)
 
 ---
 
 ### **Base de Datos - Transactions**
-A continuación, se muestra la base de datos en MongoDB de las transacciones.
+A continuación, se muestra la base de datos en MongoDB de las transacciones realizadas.
 
 ![base de datos_transactions](https://github.com/user-attachments/assets/f0b13af2-7b4a-47a2-9fc5-523decc3e8d3)
 
