@@ -1,0 +1,96 @@
+openapi: 3.0.3
+info:
+  title: API de Transacciones Bancarias
+  description: API para gestionar las transacciones bancarias (depósitos, retiros, transferencias).
+  version: 1.0.0
+paths:
+  /api/transacciones/deposito:
+    post:
+      summary: Realizar un depósito
+      operationId: realizarDeposito
+      requestBody:
+        description: Transacción de depósito
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Transaction'
+      responses:
+        '200':
+          description: Depósito realizado con éxito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+  /api/transacciones/retiro:
+    post:
+      summary: Realizar un retiro
+      operationId: realizarRetiro
+      requestBody:
+        description: Transacción de retiro
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Transaction'
+      responses:
+        '200':
+          description: Retiro realizado con éxito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+  /api/transacciones/transferencia:
+    post:
+      summary: Realizar una transferencia
+      operationId: realizarTransferencia
+      requestBody:
+        description: Transacción de transferencia
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Transaction'
+      responses:
+        '200':
+          description: Transferencia realizada con éxito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+  /api/transacciones/historial:
+    get:
+      summary: Obtener el historial de transacciones
+      operationId: obtenerHistorial
+      responses:
+        '200':
+          description: Historial de transacciones
+          content:
+            application/json:
+              type: array
+              items:
+                $ref: '#/components/schemas/Transaction'
+
+components:
+  schemas:
+    Transaction:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID de la transacción
+        tipo:
+          type: string
+          enum: [DEPOSITO, RETIRO, TRANSFERENCIA]
+          description: Tipo de transacción
+        monto:
+          type: number
+          format: float
+          description: Monto de la transacción
+        fecha:
+          type: string
+          format: date-time
+          description: Fecha y hora de la transacción
+        cuentaOrigen:
+          type: string
+          description: Número de la cuenta de origen (en caso de transferencia o retiro)
+        cuentaDestino:
+          type: string
+          description: Número de la cuenta de destino (en caso de transferencia)
