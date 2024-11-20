@@ -1,4 +1,4 @@
-# **Proyecto de Gestión de Transacciones**
+# **Gestión de Transacciones | NTTDATA Bootcamp**
 
 ---
 
@@ -19,13 +19,11 @@ Este es un microservicio que gestiona las transacciones bancarias de un sistema,
 
 ## **Funcionalidades**
 
-### Microservicio de Transacciones
+El microservicio de transacciones permite realizar operaciones como:
 
-El microservicio de transacciones permite realizar operaciones de:
-
-- **💰 Registrar un Depósito**
-- **💸 Registrar un Retiro**
-- **🔄 Registrar una Transferencia**
+- **💰 Realizar un Depósito**
+- **💸 Realizar un Retiro**
+- **🔄 Realizar una Transferencia**
 
 El historial de transacciones está almacenado en **MongoDB** y se puede consultar a través de un endpoint.
 
@@ -37,7 +35,7 @@ El historial de transacciones está almacenado en **MongoDB** y se puede consult
 
 - **URL:** `http://localhost:8085/api/cuentas`
 - **Método:** `POST`
-- **Cuerpo de la solicitud:** 
+- **Cuerpo de la solicitud:**
 {
     "numeroCuenta": "123456789",
     "saldo": 1000.0,
@@ -49,7 +47,7 @@ El historial de transacciones está almacenado en **MongoDB** y se puede consult
 
 - **URL:** `http://localhost:8085/api/transacciones/retiro`
 - **Método:** `POST`
-- **Cuerpo de la solicitud:** 
+- **Cuerpo de la solicitud:**
 {
   "monto": 900.0,
   "cuentaOrigen": "123456789"
