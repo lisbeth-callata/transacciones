@@ -29,6 +29,20 @@ El historial de transacciones está almacenado en **MongoDB** y se puede consult
 
 ---
 
+### **Base de Datos - Account**
+A continuación, se muestra la base de datos en MongoDB de las cuentas.
+
+![base de datos_accounts](https://github.com/user-attachments/assets/c27499ab-d93f-49b5-a97e-89f556d19bae)
+
+---
+
+### **Base de Datos - Transactions**
+A continuación, se muestra la base de datos en MongoDB de las transacciones.
+
+![base de datos_transactions](https://github.com/user-attachments/assets/f0b13af2-7b4a-47a2-9fc5-523decc3e8d3)
+
+---
+
 ## **Endpoints**
 
 ### 1. **Crear Cuenta**
